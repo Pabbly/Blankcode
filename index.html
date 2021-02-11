@@ -1,42 +1,20 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zendesk Task Ticket</title>
-	<style>
-                .lmg {
-			margin-left: 17px;
-                }
-	</style>
-</head>
-<body>
-	<h1>Zendesk Task Ticket</h1>
-    <form name="zendesktaskticket" method="POST" netlify>
-	<input type="hidden" name="form-name" value="zendesktaskticket">
-        <p>
-          <label>Subject<input type="text" name="subject" required class="lmg" /></label>   
-        </p>
-		<p>
-          <label>Description: <textarea name="description" required class="lmg"></textarea></label>
-        </p>
-
-		<p>
-          <label>Requestor Full Name<input type="text" name="requestor_name" required class="lmg" /></label>   
-        </p>
-		<p>
-          <label>Requestor Email: <input type="email" name="requestor_email" required class="lmg" /></label>
-        </p>
-		
-		<p>
-          <label>Assignee Full Name<input type="text" name="assignee_name" required class="lmg" /></label>   
-        </p>
-		<p>
-          <label>Assignee Email: <input type="email" name="assignee_email" required class="lmg" /></label>
-        </p>
-        <p>
-          <button type="submit" class="lmg">Submit</button>
-        </p>
-      </form>
-
-</body>
-</html>
+<form name="contact" method="POST" netlify>
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
